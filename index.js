@@ -68,9 +68,10 @@ const speakTime = () => {
     }
 
     //минуты
-    if (min >= 3 && min <= 20 || min == 0 && !isMinBelow20Said) {
+    if (!isMinBelow20Said && (min >= 3 && min <= 20 || min == 0 )) {
       addSrc(min);
       isMinBelow20Said = true;
+      console.log("000...")
       return;
     }
 
